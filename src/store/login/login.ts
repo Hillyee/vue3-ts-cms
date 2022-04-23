@@ -1,12 +1,16 @@
-import { Module } from "vuex"
+import { Module } from 'vuex'
 import { ILoginState } from './types'
 import { IRootState } from '../types'
-import { accountLoginRequest, requestUserInfoById, requestUserMenuByRoleId } from "@/service/login/login"
-import { IAccount } from "@/service/login/type"
+import {
+  accountLoginRequest,
+  requestUserInfoById,
+  requestUserMenuByRoleId
+} from '@/service/login/login'
+import { IAccount } from '@/service/login/type'
 import LoaclCache from '@/utils/cache'
-import router from "@/router"
+import router from '@/router'
 
-const loginMoudule: Module<ILoginState, IRootState>  = {
+const loginMoudule: Module<ILoginState, IRootState> = {
   namespaced: true,
   state() {
     return {
@@ -30,7 +34,7 @@ const loginMoudule: Module<ILoginState, IRootState>  = {
   },
   actions: {
     // 登录
-    async accountLoginAction({commit}, payload: IAccount) {
+    async accountLoginAction({ commit }, payload: IAccount) {
       // 1.实现登录逻辑
       const loginResult = await accountLoginRequest(payload)
       const { id, token } = loginResult.data
