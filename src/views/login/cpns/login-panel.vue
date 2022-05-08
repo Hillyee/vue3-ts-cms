@@ -35,7 +35,7 @@
 
 <script setup lang="ts">
 // 引入图标
-import { Avatar, Cellphone } from '@element-plus/icons-vue'
+// import { Avatar, Cellphone } from '@element-plus/icons-vue'
 import LoginAccount from './login-account.vue';
 import LoginPhone from './login-phone.vue';
 import { ref } from 'vue';

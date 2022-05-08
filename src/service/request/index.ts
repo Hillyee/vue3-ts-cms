@@ -69,7 +69,7 @@ class MYRequest {
     )
   }
 
-  request<T>(config: MYRequestConfig<T>):Promise<T> {
+  request<T = any>(config: MYRequestConfig<T>):Promise<T> {
     return new Promise((resolve, reject) => {
       if (config.interceptors?.requestInterceptor) {
         config = config.interceptors.requestInterceptor(config)
@@ -99,19 +99,19 @@ class MYRequest {
     })
   }
 
-  get<T>(config: MYRequestConfig<T>): Promise<T> {
+  get<T = any>(config: MYRequestConfig<T>): Promise<T> {
     return this.request<T>({...config, method: 'GET'})
   }
 
-  post<T>(config: MYRequestConfig<T>): Promise<T> {
+  post<T = any>(config: MYRequestConfig<T>): Promise<T> {
     return this.request<T>({...config, method: 'POST'})
   }
 
-  delete<T>(config: MYRequestConfig<T>): Promise<T> {
+  delete<T = any>(config: MYRequestConfig<T>): Promise<T> {
     return this.request<T>({...config, method: 'DELETE'})
   }
 
-  patch<T>(config: MYRequestConfig<T>): Promise<T> {
+  patch<T = any>(config: MYRequestConfig<T>): Promise<T> {
     return this.request<T>({...config, method: 'PATCH'})
   }
 }
