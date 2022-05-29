@@ -1,29 +1,5 @@
 # vue3-ts-cms
 
-## Project setup
+## 项目介绍
+🎉 基于 Webpack + Vue3 + Vue-Router4 + Vuex4 + element-plus + typescript 开发的后台管理系统基本模板
 
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-
-```
-npm run build
-```
-
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
